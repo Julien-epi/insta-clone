@@ -13,7 +13,7 @@ import profilPicture from "./img/profil-picture2.jpg";
 function Header() {
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
-      <div className="flex justify-between max-w-6xl mx-5 l:mx-auto">
+      <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
         {/* Left */}
 
         <div className="relative hidden lg:inline-grid w-24 cursor-pointer">
@@ -55,8 +55,10 @@ function Header() {
 
           <div className="relative navBtn">
             <PaperAirplaneIcon className="navBtn rotate-45" />
-            <div className="absolute -top-1 -right-2 text-xs w-5 bg-red-500 rounded-full flex 
-            items-center justify-center animate-pulse text-white">
+            <div
+              className="absolute -top-1 -right-2 text-xs w-5 bg-red-500 rounded-full flex 
+            items-center justify-center animate-pulse text-white"
+            >
               3
             </div>
           </div>
@@ -64,9 +66,12 @@ function Header() {
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
 
-          <div className="h-10 w-10 rounded-full cursor-pointer">
-            <Image src={profilPicture} alt="profile picture" />
-          </div>
+          <Image
+            src={profilPicture}
+            height={40}
+            width={30}
+            alt="profile picture"
+          />
         </div>
       </div>
     </div>
