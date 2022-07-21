@@ -20,11 +20,12 @@ function Stories() {
       });
     }
     setSuggestions(suggestions);
-    // console.log(JSON.stringify(suggestions, null, "\t"));
+    console.log(JSON.stringify(suggestions, null, "\t"));
   }, []);
 
   return (
     <>
+    
       <div className="flex space-x-2 p-6 bg-white mt-8 border-gray-200 border 
       rounded-sm overflow-x-scroll scrollbar-thin scrollbar-thumb-black">
         {suggestions.map((profile) => (
@@ -36,32 +37,7 @@ function Stories() {
         ))}
       </div>
     </>
-
-    // {!data ? "...loading" : <pre>{JSON.stringify(data, null, 2, "\t")}</pre>}
   );
 }
-
-// const [data, setData] = useState(null);
-
-// useEffect(() => {
-
-//   const fetchData = async () => {
-//     const response = await fetch("/api/customers", {
-//       method: "POST",
-//       body: JSON.stringify({
-//         limit: 20,
-//       }),
-//     });
-
-//     return response.json();
-//   };
-
-//   fetchData().then((data) => {
-//     // var data = { products: []};
-
-//     setData(data);
-// console.log(JSON.stringify(data, null, "\t"));
-// });
-// }, []);
 
 export default Stories;

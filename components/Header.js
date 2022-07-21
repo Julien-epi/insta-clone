@@ -8,9 +8,14 @@ import {
   MenuIcon,
 } from "@heroicons/react/outline";
 import { HomeIcon } from "@heroicons/react/solid";
-import profilPicture from "./img/profil-picture2.jpg";
+// import profilPicture from "./img/profil-picture2.jpg";
+import { useSession } from "next-auth/react";
 
 function Header() {
+  const { data: session } = useSession();
+
+  // console.log(session);
+
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
       <div className="flex justify-between max-w-6xl mx-5 xl:mx-auto">
@@ -66,10 +71,9 @@ function Header() {
           <UserGroupIcon className="navBtn" />
           <HeartIcon className="navBtn" />
 
-          <Image
-            src={profilPicture}
-            height={40}
-            width={30}
+          <img
+            className="h-10 rounded-full cursor-pointer"
+            src={session?.user?.image}
             alt="profile picture"
           />
         </div>
