@@ -20,7 +20,7 @@ export const Suggestions = () => {
       });
     }
     setSuggestions(suggestions);
-    console.log(JSON.stringify(suggestions, null, "\t"));
+    // console.log(JSON.stringify(suggestions, null, "\t"));
   }, []);
 
 
@@ -32,9 +32,9 @@ export const Suggestions = () => {
       </div>
 
       {suggestions.map((profile) => (
-          <div key={profile.id} className="fex items-center justify-between mt-3">
+          <div key={profile.id} className="flex items-center justify-between mt-3">
 
-            <img className="h-10 w-10 rounded-full border p-[2px]" src={profile.avatar} alt="" />
+            <img className="h-10 w-10 rounded-full border p-[2px]" src={profile.avatar} alt="picture avatar" />
 
             <div className="flex-1 ml-4">
               <h2 className="font-semibold text-sm">{profile.username}</h2>
